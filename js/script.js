@@ -26,7 +26,7 @@
     };
 
     const init = () => {
-
+        render();
     };
 
     init();
