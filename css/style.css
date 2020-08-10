@@ -22,9 +22,14 @@ body {
 .container__item {
     display: grid;
     background-color: white;
-    max-height: 50px;
+    max-height: 90px;
     padding: 20px;
     margin: 1px;
+}
+
+.grey-background {
+    background-color: #eee;
+    padding: 0;
 }
 
 .form {
@@ -34,6 +39,31 @@ body {
 }
 
 h1 {
+
+}
+
+.input-style {
+    padding: 5px;
+    margin-right: 10px;
+    width: 700px;
+    height: 35px;
+    text-align: center;
+}
+
+.button {
+    display: flex;
+    height:  35px;
+    width: 100px;
+    max-width: 120px;
+    align-self: center;
+    justify-items: center;
+    background-color: rgb(17, 90, 83);
+    border: 1px solid rgb(37, 185, 170);
+    color: white;
+    padding: 8px 4px;
+
+    
+
 
 }
 
