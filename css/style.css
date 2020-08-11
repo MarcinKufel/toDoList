@@ -22,24 +22,26 @@ body {
 .container__item {
     display: grid;
     background-color: white;
-    max-height: 90px;
+    max-height: 100vh;
     padding: 20px;
     margin: 1px;
+    font-weight: bold;
+}
+
+.container__item--between {
+    margin: 0 0 7px 0;
+
 }
 
 .grey-background {
     background-color: #eee;
-    padding: 0;
+    padding: 10px 0;
 }
 
 .form {
     display: flex;
     align-self: center;
     justify-self: center;
-}
-
-h1 {
-
 }
 
 .input-style {
@@ -57,13 +59,25 @@ h1 {
     max-width: 120px;
     align-self: center;
     justify-items: center;
-    background-color: rgb(17, 90, 83);
+    background-color: rgb(12, 143, 130);
     border: 1px solid rgb(37, 185, 170);
     color: white;
     padding: 8px 4px;
-
-    
-
+    font-weight: bold;
 
 }
 
+.button-notdone {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    background-color: green;
+}
+
+.button-done {
+    display: flex;
+    height: 20px;
+    width: 20px;
+    background-color: green;
+    background-image: url("/images/bird.png");
+}
