@@ -39,7 +39,8 @@ body {
 }
 
 .form {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-self: center;
     justify-self: center;
 }
@@ -92,4 +93,8 @@ body {
     height: 20px;
     width: 20px;
     background-color: red;
+}
+
+.tasks {
+    list-style: none;
 }
