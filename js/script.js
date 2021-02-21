@@ -2,11 +2,11 @@
 
     const tasks = [
         {
-            content: "pouczyć się",
+            content: "study hard",
             done:false,
         },
         {
-            content: "poćwiczyć żeby schudnąć",
+            content: "lose weight",
             done:true,
         },
     ];
@@ -62,7 +62,7 @@
             <button class="js-done button-notdone"></button>
             ${task.content}
 
-            <button class="js-remove">usuń</button>
+            <button class="js-remove button-remove">delete</button>
             </li>
             `;
         }
