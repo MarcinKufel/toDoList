@@ -70,28 +70,28 @@ body {
 
 .button-notdone {
     display: grid;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     background-color: green;
 }
 
 .button-notdone:hover {
     display: grid;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     background-color: rgb(12, 165, 12);
 }
 
 .button-done {
     display: grid;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
 }
 
 .button-remove {
     display: grid;
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     background-color: red;
 }
 
@@ -104,4 +104,5 @@ body {
     grid-template-columns: auto 1fr auto;
     grid-gap: 10px;
     align-items: center;
+    padding: 10px;
 }

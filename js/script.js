@@ -42,7 +42,7 @@
 
 
     
-        const toggleDoneButtons = document.querySelectorAll(".js-done");
+        const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
 
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
             toggleDoneButton.addEventListener("click", () => {
@@ -59,10 +59,10 @@
         for(const task of tasks) {
             htmlString += `
             <li class="task__item" ${task.done ?  "style=\"text-decoration: line-through\"" : ""}>
-            <button class="js-done button-notdone"></button>
+            <button class="js-toggleDone button-notdone">✔</button>
             ${task.content}
 
-            <button class="js-remove button-remove">delete</button>
+            <button class="js-remove button-remove">🗑</button>
             </li>
             `;
         }
