@@ -82,17 +82,18 @@ body {
     background-color: rgb(12, 165, 12);
 }
 
-.button-done {
-    display: grid;
+.tasks__button {
     height: 30px;
     width: 30px;
 }
 
 .button-remove {
-    display: grid;
+    color: white;
     height: 30px;
     width: 30px;
     background-color: red;
+    padding: 0;
+    border: none;
 }
 
 .tasks {
@@ -105,4 +106,8 @@ body {
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
+}
+
+.tasks__content--done {
+    text-decoration: line-through;
 }
