@@ -51,18 +51,16 @@
         });
 
     });
-    }
+    };
 
     const render = () => {
         let htmlString = "";
 
         for(const task of tasks) {
             htmlString += `
-            <li class="task__item js-task">
+            <li class="task__item js-task">  
             
-        
-            
-            <button class="tasks__button tasks__button--toggleDone js-toggleDone ">
+            <button class="tasks__button--toggleDone js-toggleDone ">
             ${task.done ?  "✔" : ""}
             </button>
 
@@ -70,12 +68,12 @@
             ${task.content}
             </span>
             
-            <button class="js-remove button-remove">
+            <button class="js-remove tasks__button--remove">
             🗑
             </button>
             </li>
             `;
-        }
+        };
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
 

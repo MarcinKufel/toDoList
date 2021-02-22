@@ -80,16 +80,12 @@ body {
     background-color: hsl(120, 100%, 20%);
 }
 
-.tasks__button {
+.tasks__button--toggleDone {
     border: none;
     height: 30px;
     width: 30px;
     background-color: green;
     padding: 0;
-}
-
-.tasks__button--toggleDone {
-    background-color: green;
 }
 
 .tasks__button--toggleDone:hover {
@@ -100,13 +96,21 @@ body {
     background-color: hsl(120, 100%, 35%);
 }
 
-.button-remove {
+.tasks__button--remove {
     color: white;
     height: 30px;
     width: 30px;
     background-color: red;
     padding: 0;
     border: none;
+}
+
+.tasks__button--remove:hover {
+    background-color: hsl(0, 100%, 60%);
+}
+
+.tasks__button--remove:active {
+    background-color: hsl(0, 100%, 70%);
 }
 
 .tasks {
@@ -131,4 +135,3 @@ body {
     text-decoration: line-through;
 }
 
-.tasks__button--toggleDone {}
