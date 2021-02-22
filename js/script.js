@@ -3,17 +3,17 @@
     const tasks = [
         {
             content: "study hard",
-            done:false,
+            done: false,
         },
         {
             content: "lose weight",
-            done:true,
+            done: true,
         },
     ];
 
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({ content: newTaskContent});
+        tasks.push({ content: newTaskContent });
         render();
     };
 
@@ -46,38 +46,38 @@
             toggleDoneButton.addEventListener("click", () => {
                 toggleTaskDone(index);
 
-        });
+            });
 
-    });
+        });
     };
 
     const render = () => {
-        let htmlString = "";
+        let tasksListHTMLContent = "";
 
-        for(const task of tasks) {
-            htmlString += `
+        for (const task of tasks) {
+            tasksListHTMLContent += `
             <li class="task__item js-task">  
             
-            <button class="tasks__button--toggleDone js-toggleDone ">
-            ${task.done ?  "✔" : ""}
-            </button>
+                 <button class="tasks__button--toggleDone js-toggleDone ">
+                  ${task.done ? "✔" : ""}
+                 </button>
 
-            <span class="tasks__content ${task.done ? "tasks__content--done":""}" >
-            ${task.content}
-            </span>
+                 <span class="tasks__content ${task.done ? "tasks__content--done" : ""}" >
+                 ${task.content}
+                 </span>
             
-            <button class="js-remove tasks__button--remove">
-            🗑
-            </button>
+                 <button class="js-remove tasks__button--remove">
+                 🗑
+                </button>
             </li>
             `;
         };
 
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+        document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
 
         bindRemoveEvents();
         bindToggleDoneEvents();
-};
+    };
 
 
 
@@ -87,13 +87,13 @@
 
         const newTaskElement = document.querySelector(".js-newTask");
         const newTaskContent = newTaskElement.value.trim();
-       
+
         if (newTaskContent !== "") {
             addNewTask(newTaskContent);
             newTaskElement.value = "";
         }
 
-    newTaskElement.focus();
+        newTaskElement.focus();
 
     };
 
