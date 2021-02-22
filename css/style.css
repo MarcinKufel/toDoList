@@ -53,14 +53,25 @@ body {
     border: 1px solid #ddd;
 }
 
-.button {
+.form__button {
     background-color: rgb(12, 143, 130);
     border: none;
     color: white;
-    font-weight: bold;
 }
 
-.button-notdone {
+.form__button:hover {
+    background-color: hsl(174, 85%, 35%);
+    border: none;
+    color: white;
+}
+
+.form__button:active {
+    background-color: hsl(174, 85%, 30%);
+    border: none;
+    color: white;
+}
+
+.form__button-notdone {
     display: grid;
     height: 30px;
     width: 30px;
@@ -71,12 +82,13 @@ body {
     display: grid;
     height: 30px;
     width: 30px;
-    background-color: rgb(12, 165, 12);
+    background-color: hsl(120, 100%, 20%);
 }
 
 .tasks__button {
     height: 30px;
     width: 30px;
+    background-color: green;
 }
 
 .button-remove {
@@ -90,6 +102,7 @@ body {
 
 .tasks {
     list-style: none;
+    padding:0;
 }
 
 .task__item {
@@ -98,14 +111,15 @@ body {
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
+    border-bottom: 1px solid #aaa;
 }
 
 .tasks__content {
-    text-decoration: line-through;
+    text-decoration: none;
 }
 
 .tasks__content--done {
-    text-decoration: none;
+    text-decoration: line-through;
 }
 
 .tasks__button--toggleDone {}
