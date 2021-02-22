@@ -4,33 +4,30 @@
 }
 
 body {
-    background-color: #eee;
-    height: 100vh;
+    background-color: rgb(182, 178, 178);
 }
 
 .container {
-    display: grid;
-    background-color: #eee;
-    max-width: 800px;
-    align-items: center;
-    margin: 50px auto;
-
-
-
-}
-
-.container__item {
-    display: grid;
-    background-color: white;
-    max-height: 100vh;
+    max-width: 900px;
     padding: 20px;
-    margin: 1px;
-    font-weight: bold;
+    margin: 0px auto;
 }
 
-.container__item--between {
-    margin: 0 0 7px 0;
+.section {
+    background-color: #ddd;
+    margin: 10px 0;
+    box-shadow: 0 0 5px #aaa;
+}
 
+.section__header {
+    font-size: 20px;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 1px solid #aaa
+}
+
+.section__body {
+    padding: 20px;
 }
 
 .grey-background {
@@ -41,31 +38,26 @@ body {
 .form {
     display: grid;
     grid-template-columns: 1fr auto;
-    align-self: center;
-    justify-self: center;
+    grid-gap: 20px;
 }
 
-.input-style {
-    padding: 5px;
-    margin-right: 10px;
-    width: 700px;
-    height: 35px;
-    text-align: center;
+@media (max-width: 767px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form__input {
+    background-color: #eee;
+    padding: 10px;
+    border: 1px solid #ddd;
 }
 
 .button {
-    display: flex;
-    height:  35px;
-    width: 100px;
-    max-width: 120px;
-    align-self: center;
-    justify-items: center;
     background-color: rgb(12, 143, 130);
-    border: 1px solid rgb(37, 185, 170);
+    border: none;
     color: white;
-    padding: 8px 4px;
     font-weight: bold;
-
 }
 
 .button-notdone {
@@ -101,13 +93,19 @@ body {
 }
 
 .task__item {
-    display:grid;
+    display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
 }
 
-.tasks__content--done {
+.tasks__content {
     text-decoration: line-through;
 }
+
+.tasks__content--done {
+    text-decoration: none;
+}
+
+.tasks__button--toggleDone {}
