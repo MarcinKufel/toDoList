@@ -7,13 +7,6 @@ body {
     background-color: rgb(182, 178, 178);
 }
 
-.button-notdone:hover {
-    display: grid;
-    height: 30px;
-    width: 30px;
-    background-color: hsl(120, 100%, 20%);
-}
-
 .tasks__button--toggleDone {
     border: none;
     height: 30px;
