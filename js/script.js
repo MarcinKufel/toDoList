@@ -13,14 +13,12 @@
 
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks.push({ content: newTaskContent});
         render();
     };
 
-    const removeTask = (index) => {
-        tasks.splice(index, 1);
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
         render();
     }
 
@@ -29,19 +27,19 @@
         render();
     };
 
-    const bindEvents = () => {
+    const bindRemoveEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
 
-        removeButtons.forEach((removeButton, index) => {
+        removeButtons.forEach((removeButton, taskIndex) => {
             removeButton.addEventListener("click", () => {
-                removeTask(index);
+                removeTask(taskIndex);
             });
 
         });
+    };
 
 
-
-    
+    const bindToggleDoneEvents = () => {
         const toggleDoneButtons = document.querySelectorAll(".js-toggleDone");
 
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
@@ -77,7 +75,8 @@
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
 
-        bindEvents();
+        bindRemoveEvents();
+        bindToggleDoneEvents();
 };
 
 
