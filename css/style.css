@@ -30,11 +30,6 @@ body {
     padding: 20px;
 }
 
-.grey-background {
-    background-color: #eee;
-    padding: 10px 0;
-}
-
 .form {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -86,9 +81,23 @@ body {
 }
 
 .tasks__button {
+    border: none;
     height: 30px;
     width: 30px;
     background-color: green;
+    padding: 0;
+}
+
+.tasks__button--toggleDone {
+    background-color: green;
+}
+
+.tasks__button--toggleDone:hover {
+    background-color: hsl(120, 100%, 30%);
+}
+
+.tasks__button--toggleDone:active {
+    background-color: hsl(120, 100%, 35%);
 }
 
 .button-remove {
